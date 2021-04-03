@@ -1,7 +1,11 @@
+# Getting Started
+
 This is a sample todo web api with Nodejs.
 
 This project use AWS DynamoDb as a NoSql database.
-How to run it locally?
+
+## How to run it locally?
+
 you need to AWS dynamoDb. Using Docker image is the easiest way.
 Simply run docker run -p 8000:8000 amazon/dynamodb-local to execute DynamoDB locally. so the URL of Database is http://localhost:8000
 
@@ -29,7 +33,8 @@ npm run start
 
 done. Api is listening PORT=9090.
 
-EndPoints:
+## EndPoints:
+
 1- get all records.
 Http method: GET URL : http://localhost:9090/todos/
 2- get one record by id

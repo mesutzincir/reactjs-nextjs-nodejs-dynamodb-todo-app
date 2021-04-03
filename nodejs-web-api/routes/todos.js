@@ -9,13 +9,13 @@ import {
 
 const todoRouter = express.Router();
 
-todoRouter.get("/", getTodos);
+todoRouter.get("/todos", getTodos);
 
-todoRouter.post("/", createTodo);
+todoRouter.post("/todos", createTodo);
 
-todoRouter.get("/:id", getTodo);
+todoRouter.get("/todos/:id", getTodo);
 
-todoRouter.delete("/:id", deleteTodo);
+todoRouter.delete("/todos/:id", deleteTodo);
 
-todoRouter.patch("/:id", patchTodo);
+todoRouter.patch("/todos/:id", patchTodo);
 export default todoRouter;

@@ -1,0 +1,49 @@
+body {
+  max-width: 100%;
+}
+/* base styles */
+* {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  /* color: #333; */
+}
+h1,
+h2 {
+  font-family: Georgia, serif;
+}
+
+.navbar {
+  /* padding: 20px; */
+  display: flex;
+  align-items: center;
+
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: 2em;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.pagetitle {
+  color: darkblue;
+}

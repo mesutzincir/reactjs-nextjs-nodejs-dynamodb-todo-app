@@ -13,14 +13,6 @@ const app = express();
 const PORT = process.env.PORT;
 app.use(express.json());
 
-app.use("/users", userRoutes); //middleware to route /users
-
-app.use("/todos", todoRouter); // middleware to /todos
-
-app.get("/", (request, response) => {
-  response.end("hello home page");
-});
-
 createDB();
 
 app.listen(
@@ -28,3 +20,11 @@ app.listen(
   /* callback function */
   () => console.log(`Wellcome Nodejs web api. PORT:${PORT}`)
 );
+
+app.use(userRoutes); //middleware to route /users
+
+app.use(todoRouter); // middleware to /todos
+
+app.get("/", (request, response) => {
+  response.end("hello home page");
+});

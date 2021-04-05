@@ -40,7 +40,8 @@ function TodoList() {
 
   const handleDeleteClick = async (id) => {
     try {
-      const result = await fetch("http://localhost:9090/todos/" + id, {
+      const apiULR = process.env.REACT_APP_TODO_API_BASEURL + "todos/" + id;
+      const result = await fetch(apiULR, {
         method: "DELETE", // *GET, POST, PUT, DELETE, etc.
       });
       const data = await result.json();

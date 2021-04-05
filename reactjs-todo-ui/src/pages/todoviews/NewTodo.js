@@ -31,10 +31,8 @@ function NewTodo() {
     //   })
     //   .catch((err) => console.log(JSON.stringify(err)));
     try {
-      const result = await fetch(
-        "http://localhost:9090/todos/",
-        requestOptions
-      );
+      const apiULR = process.env.REACT_APP_TODO_API_BASEURL + "todos/";
+      const result = await fetch(apiULR, requestOptions);
       history.goBack();
     } catch (error) {
       console.log(JSON.stringify(error));

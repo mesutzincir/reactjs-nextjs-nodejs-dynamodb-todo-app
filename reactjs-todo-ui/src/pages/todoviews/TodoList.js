@@ -28,7 +28,8 @@ function TodoList() {
   ]);
 
   useEffect(() => {
-    fetch("http://localhost:9090/todos/")
+    const apiULR = process.env.REACT_APP_TODO_API_BASEURL + "todos/";
+    fetch(apiULR)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

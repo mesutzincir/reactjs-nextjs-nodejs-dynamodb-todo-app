@@ -15,6 +15,14 @@ export default function Home() {
       <Typography variant="body1">
         Please don't forget to run Nodejs web api project to test.
       </Typography>
+      <Typography variant="body1">
+        process.env.NODE_ENV = {process.env.NODE_ENV}
+        <br />
+        process.env.REACT_APP_TODO_API__BASEURL=
+        {process.env.REACT_APP_TODO_API_BASEURL}
+        <br />
+        process.env.REACT_APP_SECRET_VALUE={process.env.REACT_APP_SECRET_VALUE}
+      </Typography>
     </div>
   );
 }

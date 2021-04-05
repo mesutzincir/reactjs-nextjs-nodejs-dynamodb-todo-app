@@ -26,12 +26,10 @@ function EditTodo(props) {
         status: status,
       }),
     };
+    const apiULR = process.env.REACT_APP_TODO_API_BASEURL + "todos/" + todo.id;
     console.log(JSON.stringify(requestOptions));
     try {
-      const result = await fetch(
-        "http://localhost:9090/todos/" + todo.id,
-        requestOptions
-      );
+      const result = await fetch(apiULR, requestOptions);
       history.goBack();
     } catch (error) {
       console.log(JSON.stringify(error));
